@@ -1,19 +1,27 @@
 <h1>Listing carts</h1>
 
 <table>
+
   <tr>
-    <th></th>
-    <th></th>
-    <th></th>
+  	<th>Images</th>
+    <th>Cart ID</th>
+    <th>Actions</th>
   </tr>
 
 <% @carts.each do |cart| %>
-  <tr>
-    <td><%= link_to 'Show', cart %></td>
-    <td><%= link_to 'Edit', edit_cart_path(cart) %></td>
-    <td><%= link_to 'Destroy', cart, :confirm => 'Are you sure?', :method => :delete %></td>
+  <tr> 	
+  	<td class ="list_image"><%= image_tag("logo.png")%></td>  	
+  	<td align="center"><%= cart.id %></td> 	
+  	<td class="list_actions">
+        <%= link_to 'Show', cart %><br/>
+        <%= link_to 'Edit', edit_cart_path(cart) %><br/>
+        <%= link_to 'Destroy', cart, 
+                    :confirm => 'Are you sure?',
+                    :method => :delete %></br>    
+    </td>
   </tr>
 <% end %>
+
 </table>
 
 <br />

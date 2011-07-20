@@ -93,9 +93,7 @@
 
 #product_list .list_actions {
   font-size:    x-small;
-  text-align:   right;
-  padding-left: 1em;
-  padding-right:1.5em;
+  text-align:   center;
 }
 
 #product_list .list_line_even {
