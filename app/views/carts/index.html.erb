@@ -3,16 +3,16 @@
 <table>
 
   <tr>
-  	<th>Images</th>
-    <th>Cart ID</th>
+  	<th>Cart_ID</th>
+    <th>Total_price</th>
     <th>Actions</th>
   </tr>
 
 <% @carts.each do |cart| %>
   <tr> 	
-  	<td class ="list_image"><%= image_tag("logo.png")%></td>  	
-  	<td align="center"><%= cart.id %></td> 	
-  	<td class="list_actions">
+  	<td align="center"><%= cart.id %></td> 
+  	<td align="center"><%= number_to_currency(cart.total_price)%></td>  	  		
+  	<td>
         <%= link_to 'Show', cart %><br/>
         <%= link_to 'Edit', edit_cart_path(cart) %><br/>
         <%= link_to 'Destroy', cart, 
