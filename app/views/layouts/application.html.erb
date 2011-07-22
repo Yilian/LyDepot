@@ -21,6 +21,14 @@
     
     <div id="columns">    	
     	<div id="side">
+    		<!--
+    		<div id ="cart" 
+    			<%# if @cart.line_items.empty? %>
+    				style = "display: none"
+    			<%# end %>
+    		>
+    			<%#= render @cart %> 	
+    		</div> -->
     		<div id="cart">
     			<% if @cart %>
     			  <%= hidden_div_if(@cart.line_items.empty?, :id => "cart") do %>
