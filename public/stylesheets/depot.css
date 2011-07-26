@@ -1,8 +1,8 @@
 /* Global styles */
 
 #store #notice {
-        color: #000;
-        border: 2px solid red;
+        color: black;
+        border: 2px solid green;
         padding: 1em;
         margin-bottom: 2em;
         background-color: #f0f0f0;
@@ -137,8 +137,8 @@
 
 #main {
 	margin-left: 13em;/* main = total_width - side_width */
-	padding-top: 4px;
-	padding-left: 1em;
+	padding-top: 4ex;
+	padding-left: 2em;
 	background: white;
 }
 
@@ -159,7 +159,7 @@
 
 /* Styles for the cart in the main page */
 #store .cart_title {
-	font: 120% bold;
+	font: 150% bold;
 }
 
 #store .item_price, #store .total_line {
@@ -172,14 +172,52 @@
 }
 
 /* Styles for the cart in the sidebar */
-#cart, #cart table{
+#cart {
 	font-size: 12px;
 	color: #cfc;
 }
 
-#cart table{
+#cart .cart_table {
 	border-top: 1px dotted #595;
 	border-bottom: 1px dotted #595;
-	margin-bottom: 10px;
+	margin-bottom: 3px;
 }
 
+#cart .button_table {
+	margin-bottom: 10px;
+	float: right;
+}
+
+/* Styles for order form */
+.depot_form fieldset {
+	background: #efe;
+	width: 75%;
+}
+
+.depot_form legend {
+	color: #dfd;
+	background: #141;
+	font-family: sans-serif;
+	padding: 0.2em 1em;
+}
+
+.depot_form label{
+	width: 5em;
+	float: left;
+	text-align: right;
+	padding-top: 0.2em;
+	margin-right: 0.1em;
+	display: block;
+}
+
+.depot_form select, .depot_form textarea, .depot_form input{
+	margin-left: 0.5em;
+}
+
+.depot_form .submit{
+	margin-left: 4em;
+}
+
+.depot_form div{
+	margin: 0.5em 0;
+}
