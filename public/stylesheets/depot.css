@@ -202,10 +202,11 @@
 }
 
 .depot_form label{
-	width: 5em;
+	width: 4.5em;
 	float: left;
-	text-align: right;
+	text-align: left;
 	padding-top: 0.2em;
+	margin-left: 1em;
 	margin-right: 0.1em;
 	display: block;
 }
@@ -215,7 +216,8 @@
 }
 
 .depot_form .submit{
-	margin-left: 4em;
+	margin-left: 5.5em;
+	margin-top: 1em;
 }
 
 .depot_form div{
