@@ -4,10 +4,18 @@ class User < ActiveRecord::Base
   validates :name, :presence => true, :uniqueness => true
   
   validates :password, :confirmation => true
-  attr_accessor :password_confirmation => true
+  attr_accessor :password_confirmation 
   attr_reader :password
   
   validate :password_must_be_present
+  
+  after_destroy :ensure_an_admin_remains
+  
+  def ensure_an_admin_remains
+    if User.count.zero?
+      raise "Can't delete last user"
+    end
+  end
   
   #验证用户，当输入正确的用户名与密码时，返回一个user对象
   class << self
@@ -18,11 +26,11 @@ class User < ActiveRecord::Base
         end
       end
     end
-  end
-  
-  #使用salt值，结合密码明文产生一个字符串，最后使用SHA2对其加密产生16进制的40个字符
-  def encrypt_password(password, salt)
-    Digest::SHA2.hexdigest(password + "wibble" + salt)
+    
+     #使用salt值，结合密码明文产生一个字符串，最后使用SHA2对其加密产生16进制的40个字符
+     def encrypt_password(password, salt)
+       Digest::SHA2.hexdigest(password + "wibble" + salt)
+     end
   end
   
   #对明文进行加密，将明文转换成哈希字符串

@@ -7,6 +7,7 @@
         margin-bottom: 2em;
         background-color: #f0f0f0;
         font: bold smaller sans-serif;
+        width: 90%;
 }
 
 #store h1 {
@@ -203,7 +204,7 @@
 .depot_form label{
 	width: 4.5em;
 	float: left;
-	text-align: left;
+	text-align: right;
 	padding-top: 0.2em;
 	margin-left: 1em;
 	margin-right: 0.1em;
