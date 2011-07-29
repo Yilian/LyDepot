@@ -136,7 +136,7 @@
 }
 
 #main {
-	margin-left: 13em;/* main = total_width - side_width */
+	margin-left: 13.5em;/* main = total_width - side_width */
 	padding-top: 4ex;
 	padding-left: 2em;
 	background: white;
@@ -148,7 +148,7 @@
 	padding-left: 0.5em;
 	padding-right: 0.5em;
 	padding-bottom: 1em;
-	width: 12em;
+	width: 12.5em;
 	background: #141;
 }
 
@@ -202,7 +202,7 @@
 }
 
 .depot_form label{
-	width: 4.5em;
+	width: 5em;
 	float: left;
 	text-align: right;
 	padding-top: 0.2em;
@@ -216,10 +216,16 @@
 }
 
 .depot_form .submit{
-	margin-left: 5.5em;
+	margin-left: 6em;
 	margin-top: 1em;
 }
 
 .depot_form div{
 	margin: 0.5em 0;
+}
+
+/* Styles for Language Selector */
+.locale{
+	float: right;
+	padding-top: 0.2em;
 }
